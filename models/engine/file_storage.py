@@ -18,7 +18,7 @@ Class Filestorage():
     __file_path = "file.json"
     __objects = {}
 
-    @publicinstance
+    @publicmethod
     def all(self):
         """returns the dictionary __objects
         """
