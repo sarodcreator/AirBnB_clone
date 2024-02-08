@@ -79,7 +79,7 @@ class HBNBCommand(cmd.Cmd):
         arg = parse(line)
         if not arg:
             print("** class name missing **")
-        elif args[0] not in self.classes:
+        elif args[0] not in self.class_list:
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
@@ -93,7 +93,24 @@ class HBNBCommand(cmd.Cmd):
                 models.storage.save()
             except KeyError:
                 print("** no instance found **")
+    
+    def do_all (self, line):
+        """Prints all string representation of all instances 
+        based or not on the class name.
+        """
 
+        arg = parse(line)
+        obj = models.storage.all()
+        obj_list = []
+
+        if arg:
+            if arg[0] not in self.class_list:
+                print ("** Class doesn't exist **")
+            obj_list = [str(value) for key, value in obj.items() 
+                    if key.startswith(arg[0])]
+        else:
+            obj_list = [str(value) for value in obj.values()]
+        print(obj_list)
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
