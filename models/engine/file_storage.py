@@ -3,7 +3,7 @@
 """Defines a Filestorage class
 """
 
-from models.base_model.py import BaseModel
+from models import *
 import json
 import os
 
