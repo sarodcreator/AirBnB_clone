@@ -7,7 +7,7 @@ from models import *
 import json
 import os
 
-Class Filestorage():
+class Filestorage():
     """Write a class FileStorage that serializes instances to a JSON file 
     and deserializes JSON file to instances
     attributes:
