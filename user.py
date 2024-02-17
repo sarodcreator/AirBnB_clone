@@ -1,11 +1,12 @@
-#!/bin/bash/python3
-"User module"""
+#!/usr/bin/python3
+"""User module"""
 from models.base_model import BaseModel
 
 class User(BaseModel):
-    """class User that inherits from base"""
+    """class User that inherits from BaseModel
+    """
 
     email = ""
     password = ""
     first_name = ""
-    last_name = ""
+    last_name + ""
