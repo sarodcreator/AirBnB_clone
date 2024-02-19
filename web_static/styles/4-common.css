@@ -4,11 +4,14 @@ body{
     color: #484848;
     font-size: 14px;
     font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    width: 100%
      
 }
-.container{
-    margin: aut;
+body .container{
     max-width: 1000px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px auto;
+}
+body .page-container {
+    position: relative;
+    min-height: 100vh;
 }
